@@ -1,26 +1,24 @@
 import React from "react";
 import AuthHeader from "./AuthHeader";
 import { IoPhonePortraitOutline } from "react-icons/io5";
-import { RiLockPasswordLine } from "react-icons/ri";
-import { FaRegEyeSlash } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
-import LoginWithOTP from "./LoginWithOTP";
+import LoginComp from "./LoginComp";
 
 const BLUE_600 = "#2563eb"; // Tailwind blue-600
 
-const LoginComp = () => {
+const LoginWithOTP = () => {
   const navigate = useNavigate();
   return (
     <div className="flex h-screen w-full">
       {/* Left Side - Login Form */}
       <div className="w-1/2 flex flex-col justify-center items-center bg-white px-10">
         {/* Logo Placeholder */}
-        <div className="w-full ml-50 mt-30">
+       <div className="w-full ml-50 mt-30">
           <AuthHeader firstText="Intern" secondText="Scan" />
         </div>
 
         {/* Content Wrapper */}
-        <div className="w-full max-w-sm space-y-8 mb-25">
+        <div className="w-full max-w-sm space-y-8 mb-30">
           {/* Title + Paragraph */}
           <div>
             <h2 className="text-2xl font-semibold mb-2">
@@ -44,35 +42,25 @@ const LoginComp = () => {
               />
             </div>
 
-            {/* Password */}
-            <div>
-              <div className="flex items-center bg-gray-100 border border-gray-200 rounded-md focus-within:ring-2 focus-within:ring-blue-500 px-2 py-2">
-                <RiLockPasswordLine size={20} className="text-gray-400 mr-2 ml-1" />
-                <input
-                  type="password"
-                  placeholder="Password"
-                  className="flex-1 bg-gray-100 outline-none border-none ml-3"
-                />
-                <FaRegEyeSlash size={18} className="text-gray-400 mr-5 ml-1 cursor-pointer" />
-              </div>
+            
               <div className="text-right mt-2">
                 <button
                   type="button"
                   className="text-blue-600 font-medium hover:underline"
-                  onClick={() => navigate("/login-otp")}
+                  onClick={() => navigate("/login-password")}
                 >
-                  Login with OTP
+                  Login with Password
                 </button>
               </div>
-            </div>
+            {/* </div> */}
 
             {/* Log in Button */}
             <button
               type="submit"
               className="w-full text-white border py-2 rounded-md font-medium mt-3"
-              style={{ backgroundColor: BLUE_600 }}
+              style={{ backgroundColor: BLUE_600 }} 
             >
-              Log in
+              Continue with OTP
             </button>
           </form>
 
@@ -84,14 +72,15 @@ const LoginComp = () => {
             </a>
           </p>
         </div>
-      </div>
+      
 
-      {/* Right Side - Placeholder */}
-      <div className="w-1/2 bg-black flex justify-center items-center">
-        {/* Your image/illustration will go here */}
+
+<div className="w-1/2 bg-black flex justify-center items-center">
+        {/* Image/illustration will go here */}
       </div>
+    </div>
     </div>
   );
 };
 
-export default LoginComp;
+export default LoginWithOTP;
