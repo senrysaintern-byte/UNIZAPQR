@@ -21,11 +21,11 @@ const OtpComp = ({ phoneNo }) => {
 
 				<div className="mt-3">
 					<input
-						type="text"
-						maxLength={4} 
+						type="password"
+						maxLength={4}
 						pattern="[0-9]*"
-						inputMode="numeric" 
-						className="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-1"
+						inputMode="numeric"
+						className="w-full border text-lg border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-1 text-center"
 					/>
 				</div>
 
