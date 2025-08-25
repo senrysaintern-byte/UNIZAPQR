@@ -1,13 +1,12 @@
 import AuthHeader from "./AuthHeader";
 
-const OtpComp = ({phoneNo}) => {
+const OtpComp = ({ phoneNo }) => {
 	return (
 		<div className="flex-1 h-full bg-white my-auto flex justify-center items-center">
 			<div className="flex flex-col gap-3 w-[60%]">
-    
 				<div className="flex flex-start">
 					<h1 className="text-2xl text-blue-600 font-medium">
-						 <AuthHeader firstText="Intern" secondText="Scan"/>
+						<AuthHeader firstText="Intern" secondText="Scan" />
 					</h1>
 				</div>
 				<div className="flex flex-start">
@@ -23,14 +22,18 @@ const OtpComp = ({phoneNo}) => {
 				<div className="mt-3">
 					<input
 						type="text"
-						placeholder=""
-						className="w-full border border-gray-300 rounded-md p-1 mt-1 focus:outline-none focus:ring-1"
+						maxLength={4} 
+						pattern="[0-9]*"
+						inputMode="numeric" 
+						className="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-1"
 					/>
 				</div>
 
 				<div className="mt-4">
-     <button className="bg-blue-600 w-full text-white py-2 rounded-md cursor-pointer">Continue</button>
-    </div>
+					<button className="bg-blue-600 w-full text-white py-2 rounded-md cursor-pointer">
+						Continue
+					</button>
+				</div>
 
 				<div className="text-gray-400 text-sm font-semibold text-center">
 					Already have an account?{" "}
