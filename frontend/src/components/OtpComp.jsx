@@ -3,7 +3,7 @@ import AuthHeader from "./AuthHeader";
 const OtpComp = ({phoneNo}) => {
 	return (
 		<div className="flex-1 h-full bg-white my-auto flex justify-center items-center">
-			<div className="flex flex-col gap-3 w-90 mx-auto">
+			<div className="flex flex-col gap-3 w-[60%]">
     
 				<div className="flex flex-start">
 					<h1 className="text-2xl text-blue-600 font-medium">
